@@ -1,0 +1,34 @@
+local ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/realEXXTEAM/Auto-Fishing-Blox-Fruuit/refs/heads/main/UI%20LIBARRY%20CORESCRIPT "))()
+local win = ui:CreateWindow("Exx Hub: Blox Fruit (Auto Fishing)")
+
+local main = win:AddTab("Main")
+local credits = win:AddTab("Credits")
+
+local title = main:AddLabel("CodeWare UI Library")
+
+local button = main:AddButton("Button","Prints Cool Button",function()
+ print("Cool Button")
+end)
+
+local toggle = main:AddToggle("Toggle Switch",false,
+ function()
+  print("Toggle turned ON")
+ end,
+ function()
+  print("Toggle turned OFF")
+ end
+)
+
+local slider = main:AddSlider("Slider",0,100,50,function(v)
+ print("Slider Changed To: "..v)
+end)
+
+local textbox = main:AddTextbox("Enter Text","Type here...",function(t)
+ print("You typed: "..t)
+end)
+
+local dropdown = main:AddDropdown("Choose Option",{"Red","Blue","Green","Purple"},function(s)
+ print("You selected: "..s)
+end)
+
+local credit = credits:AddLabel("Made By PlayerZN Gaming")
